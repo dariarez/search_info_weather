@@ -1,4 +1,4 @@
-# searchinfoweather
+# search information about weather
 
 This program allows the user to search for weather information anywhere in the world. 
 
