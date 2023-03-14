@@ -2,22 +2,22 @@ import requests
 import pandas as pd
 
 
-city = input('Введіть назву міста: ')
+city = input('Enter the name of the city: ')
 
 def get_weather(city):
-    api = '17e5e96ced879e47af884821a64775e3'
+    api = 'your_api_key'
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}&units=metric'
     response = requests.get(url)
     data = response.json()
     df = pd.DataFrame({
-        'Місто': [data['name']],
-        'Країна': [data['sys']['country']],
-        'Температура': [data['main']['temp']],
-        'Мінімальна температура': [data['main']['temp_min']],
-        'Максимальна температура': [data['main']['temp_max']],
-        'Вологість': [data['main']['humidity']],
-        'Тиск': [data['main']['pressure']],
-        'Хмарність': [data['clouds']['all']]
+        'City': [data['name']],
+        'Country': [data['sys']['country']],
+        'Temperature': [data['main']['temp']],
+        'MIN Temperature': [data['main']['temp_min']],
+        'MAX Temperature': [data['main']['temp_max']],
+        'Humidity': [data['main']['humidity']],
+        'Pressure': [data['main']['pressure']],
+        'Clouds': [data['clouds']['all']]
     })
     return df
 
