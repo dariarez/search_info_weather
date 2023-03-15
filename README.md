@@ -1,5 +1,6 @@
 # search for information on meteorological data.
 
+
 This program allows the user to search for weather information anywhere in the world. 
 
 Free API: https://openweathermap.org/.
